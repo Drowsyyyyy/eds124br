@@ -39,3 +39,105 @@
 
   <p><em>Note:</em> This page and the video are shared so anyone with the link can view.</p>
 </section>
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Teaching Portfolio Artifact — Nested Repeats (Snap)</title>
+  <style>
+    :root{--fg:#111;--bg:#fff;--muted:#555;--accent:#2563eb;--border:#e5e7eb}
+    html,body{margin:0;padding:0;background:var(--bg);color:var(--fg);font:16px/1.6 system-ui,-apple-system,Segoe UI,Roboto,Helvetica,Arial,sans-serif}
+    main{max-width:900px;margin:40px auto;padding:0 20px}
+    h1,h2,h3{line-height:1.25}
+    h1{font-size:1.875rem;margin:0 0 0.5rem}
+    h2{font-size:1.375rem;margin:2rem 0 0.5rem}
+    h3{font-size:1.125rem;margin:1.5rem 0 0.5rem}
+    .meta{color:var(--muted)}
+    .card{border:1px solid var(--border);border-radius:12px;padding:18px;margin:14px 0;background:#fafafa}
+    code{font-family:ui-monospace,SFMono-Regular,Menlo,Monaco,Consolas,"Liberation Mono","Courier New",monospace;background:#f6f8fa;border:1px solid var(--border);border-radius:6px;padding:0.1em 0.35em}
+    pre{background:#0b1020;color:#e5e7eb;border-radius:10px;padding:16px;overflow:auto;border:1px solid #111827}
+    a{color:var(--accent);text-decoration:none}
+    a:hover{text-decoration:underline}
+    .kicker{font-weight:600;color:var(--muted);text-transform:uppercase;letter-spacing:.06em;font-size:.85rem}
+    .list-tight li{margin:0.2rem 0}
+    .muted{color:var(--muted)}
+  </style>
+</head>
+<body>
+  <main>
+    <div class="kicker">Teaching Portfolio Artifact</div>
+    <h1>Circle of Squares — Visualizing Nested Repeats</h1>
+    <p class="meta">Tool: <strong>Snap (snap.berkeley.edu)</strong> &nbsp;•&nbsp; Concept focus: <strong>Nested <code>repeat</code> (inner/outer)</strong> &nbsp;•&nbsp; No variables, conditionals, or events beyond green flag.</p>
+
+    <h2>Learning Objective</h2>
+    <div class="card">
+      Students will see how an <strong>inner loop</strong> constructs one unit (a square) while the <strong>outer loop</strong>
+      repeats and rotates that unit to produce a complex pattern. They will predict outputs when loop counts/angles change
+      (e.g., <code>24 × 15°</code> also totals <code>360°</code>).
+    </div>
+
+    <h2>Program (Block Sequence)</h2>
+    <ol class="list-tight">
+      <li><strong>when green flag clicked</strong></li>
+      <li><strong>go to x:</strong> <code>0</code> <strong>y:</strong> <code>0</code></li>
+      <li><strong>clear</strong></li>
+      <li><strong>set pen size to</strong> <code>2</code></li>
+      <li><em>(optional)</em> <strong>set pen color to</strong> <em>any</em></li>
+      <li><strong>pen down</strong></li>
+      <li><strong>repeat</strong> <code>36</code>
+        <ol>
+          <li><strong>repeat</strong> <code>4</code>
+            <ol>
+              <li><strong>move</strong> <code>80</code> steps</li>
+              <li><strong>turn</strong> <code>90</code> degrees</li>
+            </ol>
+          </li>
+          <li><strong>turn</strong> <code>10</code> degrees</li>
+        </ol>
+      </li>
+      <li><strong>pen up</strong></li>
+    </ol>
+
+    <h3>Copy/Paste version (for documentation)</h3>
+    <pre><code>when green flag clicked
+go to x: 0 y: 0
+clear
+set pen size to 2
+pen down
+repeat 36 {
+  repeat 4 {
+    move 80
+    turn 90
+  }
+  turn 10
+}
+pen up</code></pre>
+
+    <h2>Video (≤ 3 minutes)</h2>
+    <p>Insert your unlisted YouTube link here → <strong><a href="#" aria-label="Replace with your video link">VIDEO LINK</a></strong></p>
+    <p class="muted">Captions file (.srt) available; upload it in YouTube Studio for auto-timed captions.</p>
+
+    <h2>Required Explanations (ready to say)</h2>
+    <ul>
+      <li><strong>The purpose of my program is…</strong> to draw a circular pattern made from many squares so students can see how a nested repeat builds a complex image from a simple shape.</li>
+      <li><strong>My code works by using nested repeats in this part to…</strong> draw one square (inner loop, 4 sides at 90° each). It also uses nested repeats to place many copies around a circle (outer loop runs 36 times, turning 10° each time to total 360°).</li>
+      <li><strong>If I were to change this nested repeat like this…</strong> change the inner loop to <code>repeat 3</code> and turn <code>120°</code>, <strong>the program would run differently:</strong> it would draw triangles instead of squares. Or keep squares but change the outer loop to <code>repeat 24</code> with <code>turn 15°</code>; it still completes a circle, but shapes are spaced farther apart.</li>
+    </ul>
+
+    <h2>Change Analysis Examples</h2>
+    <ul>
+      <li><strong>Inner loop:</strong> <code>repeat 3</code> + <code>turn 120°</code> → ring of triangles.</li>
+      <li><strong>Outer loop:</strong> <code>repeat 24</code> + <code>turn 15°</code> → completes circle with wider spacing.</li>
+      <li><strong>Side length:</strong> reduce <code>move 80</code> → same layout with smaller shapes and more negative space.</li>
+    </ul>
+
+    <h2>Reflection (1–3 sentences)</h2>
+    <div class="card">
+      Nested repeats let us scaffold complexity: the inner loop defines a shape; the outer loop controls placement and repetition.
+      Small numeric changes produce predictable visual differences, supporting reasoning about iteration and angles.
+    </div>
+  </main>
+</body>
+</html>
