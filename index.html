@@ -141,3 +141,123 @@ pen up</code></pre>
   </main>
 </body>
 </html>
+
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <title>Eventful Band — Snap! Events Showcase</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <style>
+    :root { --fg:#111; --muted:#555; --bg:#fff; --card:#f8f8f8; --link:#0b66ff; }
+    html,body { margin:0; padding:0; font-family:system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, sans-serif; color:var(--fg); background:var(--bg); }
+    .wrap { max-width:900px; margin:40px auto; padding:0 16px; }
+    h1 { font-size:2rem; margin:0 0 8px; }
+    h2 { margin-top:2rem; }
+    p { line-height:1.6; }
+    .card { background:var(--card); border-radius:16px; padding:16px 20px; }
+    .meta { color:var(--muted); font-size:0.95rem; margin-bottom:24px; }
+    ul { line-height:1.6; }
+    code, pre { background:#f1f1f1; border-radius:8px; padding:0.2em 0.4em; }
+    pre { padding:14px; overflow:auto; }
+    .two-col { display:grid; grid-template-columns: 1fr; gap:16px; }
+    @media (min-width: 880px) { .two-col { grid-template-columns: 1fr 1fr; } }
+    .video { aspect-ratio:16/9; width:100%; border:0; border-radius:12px; }
+    .links a { color:var(--link); text-decoration:none; }
+    .links a:hover { text-decoration:underline; }
+    .badge { display:inline-block; font-size:0.9rem; background:#eef3ff; color:#1e40af; padding:4px 10px; border-radius:999px; margin:2px 0; }
+    .callout { border-left:4px solid var(--link); padding:12px 14px; background:#f7faff; border-radius:8px; }
+  </style>
+</head>
+<body>
+  <main class="wrap">
+    <header>
+      <h1>Eventful Band — Snap! Events Showcase</h1>
+      <p class="meta">Course: Intro CS Teaching • Topic: <span class="badge">Events</span> • Tools: Snap!</p>
+      <div class="card">
+        <p><strong>Purpose of my program</strong>: Demonstrate how <em>events</em> trigger actions in parallel in Snap! by making three sprites (Drummer, Guitarist, Dancer) perform together.</p>
+        <p>The complete run: Press the <kbd>green flag</kbd> to reset the stage. Press <kbd>space</kbd> to broadcast <code>party</code> and watch all sprites animate in sync. Press <kbd>D</kbd> for drum hits, <kbd>G</kbd> for guitar strums, and click the Dancer to freestyle—these events work at any time.</p>
+      </div>
+    </header>
+
+    <section id="video">
+      <h2>Code Explanation Video (≤ 3 minutes)</h2>
+      <!-- Replace VIDEO_ID_HERE after upload -->
+      <iframe class="video" src="https://youtu.be/ikEPzxJYD8g" title="Snap! Events — Eventful Band" allowfullscreen></iframe>
+      <p class="meta">Tip: In YouTube Studio &rarr; <em>Subtitles</em>, upload the provided <code>.vtt</code> captions to show the exact on-screen explanation.</p>
+      <div class="links">
+        <p><strong>Assets (download then upload to YouTube):</strong></p>
+        <ul>
+          <li><a href="sandbox:/mnt/data/snap_events_eventful_band_720p.mp4">Video (MP4)</a></li>
+          <li><a href="sandbox:/mnt/data/snap_events_eventful_band_en.vtt">Captions (WebVTT)</a></li>
+          <li><a href="sandbox:/mnt/data/script_snap_events_eventful_band.txt">Script text (optional)</a></li>
+        </ul>
+      </div>
+    </section>
+
+    <section id="how-it-uses-events">
+      <h2>How my code uses events</h2>
+      <div class="two-col">
+        <div>
+          <h3>Stage</h3>
+          <ul>
+            <li><code>when green flag clicked</code> → switch backdrop to <em>Stage</em>, stop all sounds.</li>
+            <li><code>when [space] key pressed</code> → <code>broadcast [party]</code>.</li>
+          </ul>
+          <h3>Drummer</h3>
+          <ul>
+            <li><code>when green flag clicked</code> → go to <code>x:-200 y:-60</code>, set size <code>80%</code>.</li>
+            <li><code>when [D] key pressed</code> → play drum sound + flash hit costume.</li>
+            <li><code>when I receive [party]</code> → short drum-bounce loop.</li>
+          </ul>
+        </div>
+        <div>
+          <h3>Guitarist</h3>
+          <ul>
+            <li><code>when green flag clicked</code> → go to <code>x:200 y:-60</code>.</li>
+            <li><code>when [G] key pressed</code> → strum + brief tilt.</li>
+            <li><code>when I receive [party]</code> → strum loop with costume changes.</li>
+          </ul>
+          <h3>Dancer</h3>
+          <ul>
+            <li><code>when green flag clicked</code> → center &amp; set rotation style.</li>
+            <li><code>when this sprite clicked</code> → quick spin.</li>
+            <li><code>when I receive [party]</code> → 2-second dance pattern.</li>
+          </ul>
+        </div>
+      </div>
+      <div class="callout">
+        <p><strong>Event-focused explanation:</strong> the key idea is <em>timing</em>. Each handler runs <em>only when its event occurs</em>. Keys and clicks are independent; the <code>broadcast</code> synchronizes many sprites at once. No variables/ifs—just events + simple looks/motion/sound.</p>
+      </div>
+    </section>
+
+    <section id="change-impact">
+      <h2>If I change an event, how does behavior change?</h2>
+      <ul>
+        <li>Change <code>broadcast [party]</code> to <code>broadcast [showtime]</code> → nothing happens until listeners are updated to <code>when I receive [showtime]</code>.</li>
+        <li>Move drummer’s party actions from <code>when I receive [party]</code> to <code>when [D] key pressed</code> → drummer won’t join the synchronized performance; it only reacts to <kbd>D</kbd>.</li>
+        <li>Lesson: events define <em>when</em> code runs and how sprites coordinate.</li>
+      </ul>
+    </section>
+
+    <section id="build">
+      <h2>Rebuild steps (quick guide)</h2>
+      <ol>
+        <li>Create Stage + 3 sprites. Pick simple 2-costume art for Drummer/Guitarist and 2–3 costumes for Dancer.</li>
+        <li>Add the exact event blocks listed above. Keep it to events + simple motion/look/sound (no ifs or variables).</li>
+        <li>Test: Press <kbd>D</kbd>/<kbd>G</kbd> any time. Click the Dancer. Press <kbd>space</kbd> to broadcast <code>party</code> and watch synchronized behavior.</li>
+      </ol>
+    </section>
+
+    <section id="submission">
+      <h2>Submission link</h2>
+      <p>Share this page URL and set your YouTube video to <em>Unlisted</em> or <em>Public</em> so it’s viewable.</p>
+    </section>
+
+    <footer class="meta">
+      © 2025 • Snap! Events Demo — Eventful Band
+    </footer>
+  </main>
+</body>
+</html>
+
