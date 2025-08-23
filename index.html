@@ -382,3 +382,94 @@ pen up</code></pre>
   </main>
 </body>
 </html>
+
+<!doctype html>
+.muted { color: var(--muted); }
+</style>
+</head>
+<body>
+<header>
+<div class="pill">Snap • repeat until (Conditional Loop)</div>
+<h1>Conditional Loops Demo — <em>repeat until</em></h1>
+<p>by Jungwon Kim • UCSD • Teaching Portfolio</p>
+</header>
+<main>
+<section class="card" id="video">
+<h2>Video (≤ 3 minutes)</h2>
+<!-- Replace VIDEO_ID with your actual YouTube ID after upload -->
+<iframe class="video" src="https://www.youtube.com/embed/9KhcrGpsdng" title="Snap: repeat until (Conditional Loops)" allowfullscreen></iframe>
+<p class="muted">Tip: In YouTube Studio → <strong>Subtitles</strong>, upload the provided <code>conditional_loops_explainer.srt</code> file as captions.</p>
+</section>
+
+
+<section class="card" id="overview">
+<h2>Program Purpose</h2>
+<p>The purpose of my program is to demonstrate Snap’s conditional loop <strong>repeat until</strong>. The cat sprite moves toward a yellow star and stops as soon as it touches the target color.</p>
+<div class="grid">
+<div>
+<h3>Blocks Used</h3>
+<code class="block">when green flag clicked
+point towards [mouse-pointer v]
+repeat until &lt;touching color [#FFFF00]?&gt;
+move (5) steps
+say [I found the star!] for (2) secs</code>
+</div>
+<div>
+<h3>Why Conditional?</h3>
+<p>We <em>don’t know</em> in advance how many steps are needed. The distance to the star varies each run, so a fixed <code>repeat (n)</code> could stop too soon or go too far. A conditional loop runs <em>until</em> the condition becomes true.</p>
+</div>
+</div>
+</section>
+
+
+<section class="card" id="how-it-works">
+<h2>How the Code Works</h2>
+<ol>
+<li>Click the green flag to start.</li>
+<li>The sprite points toward the mouse pointer.</li>
+<li><code>repeat until &lt;touching color [yellow]&gt;</code>: move 5 steps each iteration.</li>
+<li>As soon as the sprite touches the yellow star, the loop exits and the sprite says “I found the star!”.</li>
+</ol>
+<details>
+<summary><strong>Teacher Tips (optional for demo)</strong></summary>
+<ul>
+<li>Turn on Snap’s <em>Visible Stepper</em> (footprints) so students can watch each loop iteration.</li>
+<li>Move the mouse during a run to show the number of iterations changes.</li>
+<li>Ask students to predict whether a fixed repeat would overshoot or undershoot.</li>
+</ul>
+</details>
+</section>
+
+
+<section class="card" id="script">
+<h2>Video Script (for captions)</h2>
+<p class="muted">These lines match the included <code>.srt</code> file.</p>
+<ol>
+<li>The purpose of my program is to demonstrate Snap’s conditional loop, repeat until. The cat moves toward a yellow star and stops as soon as it touches the color.</li>
+<li>My code works by pointing the sprite toward the mouse pointer, then using repeat until touching the yellow color. Inside the loop the sprite moves five steps, and the loop checks the condition after each step.</li>
+<li>We do not know how many iterations are needed because the distance can vary. The loop keeps going only while the condition is false and stops immediately when it becomes true.</li>
+<li>Conditional loops are different from regular repeats because they don’t require a fixed count. A fixed repeat might stop too early or overshoot; repeat until adapts to the situation.</li>
+<li>Teaching tip: turn on the Visible Stepper in Snap so students can watch each iteration. Move the mouse during a run to change the path and show the loop length isn’t predetermined.</li>
+<li>In summary, repeat until runs an unknown number of times until the condition is satisfied. Upload this video to YouTube, attach the captions file, and embed it on your portfolio page.</li>
+</ol>
+</section>
+
+
+<section class="card" id="submission">
+<h2>Submission Notes</h2>
+<ul>
+<li>Upload your video to YouTube as <em>Unlisted</em>. Then add captions by uploading the provided <code>.srt</code> file.</li>
+<li>Replace <code>VIDEO_ID</code> in the iframe above with your actual YouTube ID.</li>
+<li>Add this page to your teaching portfolio repository (e.g., GitHub Pages). Name it <code>index.html</code> if it’s the main page.</li>
+</ul>
+<p>
+<a class="button" href="#video">Back to video</a>
+</p>
+</section>
+</main>
+<footer>
+<p>© <span id="year"></span> Jungwon Kim. Built for EDS 124BR • Snap Conditional Loops.</p>
+</footer>
+<script>document.getElementById('year').textContent = new Date().getFullYear();</script>
+</body>
+</html>
