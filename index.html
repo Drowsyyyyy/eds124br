@@ -473,3 +473,130 @@ say [I found the star!] for (2) secs</code>
 <script>document.getElementById('year').textContent = new Date().getFullYear();</script>
 </body>
 </html>
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <title>Nested If Else — Write a Program (My Submission)</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <style>
+    :root{
+      --bg:#ffffff;
+      --fg:#111;
+      --muted:#555;
+      --card:#f7f7f9;
+      --accent:#0d6efd;
+      --codebg:#0f0f14;
+      --codefg:#e9e9f0;
+    }
+    html,body{margin:0;padding:0;background:var(--bg);color:var(--fg);font:16px/1.6 system-ui,-apple-system,Segoe UI,Roboto,Inter,Arial,sans-serif}
+    .wrap{max-width:900px;margin:40px auto;padding:0 20px}
+    h1{font-size:2rem;margin:.2rem 0 1rem}
+    h2{font-size:1.4rem;margin:1.5rem 0 .6rem}
+    h3{font-size:1.1rem;margin:1rem 0 .4rem}
+    .card{background:var(--card);border-radius:14px;padding:18px 20px;margin:18px 0}
+    a{color:var(--accent);text-decoration:none}
+    a:hover{text-decoration:underline}
+    pre{background:var(--codebg);color:var(--codefg);border-radius:12px;padding:16px;overflow:auto}
+    .video{position:relative;padding-top:56.25%;border-radius:12px;overflow:hidden;background:#000}
+    .video iframe,.video video{position:absolute;inset:0;width:100%;height:100%;border:0}
+    .note{color:var(--muted);font-size:.95rem}
+    ul{margin:.4rem 0 .8rem 1.2rem}
+    li{margin:.25rem 0}
+  </style>
+</head>
+<body>
+  <main class="wrap">
+    <header>
+      <h1>Nested If Else — Write a Program</h1>
+    </header>
+
+    <!-- EXACTLY AS WRITTEN IN THE PROMPT -->
+    <section class="card">
+      <h2>Why Do This:</h2>
+      <p>Practice programming in Snap AND develop your code explanation skills.</p>
+    </section>
+
+    <section class="card">
+      <h2>Do This Part 1: Write a program</h2>
+      <p>Remember, as a class for teachers, we want you to have an efficient experience writing a program that highlights how nested if statements work.  So we've got instructions for a specific program for you to make that really shows off the concept.  But, for those of you with more programming experience you can choose to make your own program showing off nested if statements  Just be SURE you focus on the nested if -- and don't use any concepts we have not yet covered in the class.  Either choice awards the same amount of points.</p>
+
+      <h3>Choose your own adventure by picking one of the following:</h3>
+      <p>Follow <em>these instructions</em> to create a program IDENTICAL to the one described - which highlights the functioning of the nested if else concept.</p>
+      <p>Create your own program that shows off the nested if else concept (goal:  make it something that helps students "see" nested if else's -- and how they can be used to create cool things).  Be sure not to use other concepts we haven't learned yet.  You can use instructions we haven't used yet -- but don't obscure the focus on nested if elses.</p>
+    </section>
+
+    <section class="card">
+      <h2>Do This Part 2: Document understanding with a video explanation</h2>
+      <p>Note: See the "Show What you Know" activity in Sequences for screencast recording options and advice on using the visible stepper (foot prints) in Snap.</p>
+
+      <p>Create a  video explaining your program -- it must be. less than 5 minutes! Make it as succinct as you can but still show you understand how each line of the code works - with a focus on if else.  See below for sentence starters you need to use!</p>
+
+      <p>Upload your video somewhere publicly accessible (preferably YouTube so that captions are created - you might prefer to make it <em>Unlisted</em>)</p>
+
+      <p>Add the video to the Teaching Portfolio web resource you created in the Course Orientation.  Submit a link to your Teaching Portfolio web resource that anyone with the link can access.</p>
+    </section>
+
+    <section class="card">
+      <h2>Video Requirements</h2>
+      <p>This week we'll go back to asking you to describe a change to a nested if else and how that would impact the program.  Use the following prompts below in developing your code explanation video.</p>
+      <ul>
+        <li>The purpose of my program is... (high level description of what the code does -- e.g. shows a kid dancing).  Be sure to show the complete run of your program!</li>
+        <li>My code works by using nested if elses in this part to....  (be sure to discuss all code parts that use ifs).</li>
+        <li>If I were to change this (describe a change in the condition or the code inside the if or else), the program would run differently (describe how the output of the code would change).</li>
+      </ul>
+    </section>
+
+    <!-- MY SUBMISSION CONTENT -->
+    <section class="card">
+      <h2>My Submission — Video (No Voice, Captions Only)</h2>
+      <p class="note">Upload to YouTube as <strong>Unlisted</strong> and replace <code>VIDEO_ID_HERE</code>, or host the MP4 in this repo and use the fallback player.</p>
+
+      <!-- YouTube embed (replace VIDEO_ID_HERE after upload) -->
+      <div class="video" aria-label="YouTube video player — nested if else explanation">
+        <iframe
+          src="https://www.youtube.com/embed/O44_z2Q7ILY"
+          title="Nested If Else — Program Explanation (Captions Only)"
+          allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+          allowfullscreen>
+        </iframe>
+      </div>
+
+      <h3>Fallback MP4 (if hosting locally in GitHub Pages)</h3>
+      <div class="video" aria-label="HTML5 video player — nested if else explanation">
+        <video controls preload="metadata" src="./nested_if_else_walkthrough.mp4"></video>
+      </div>
+    </section>
+
+    <section class="card">
+      <h2>My Submission — Sentence Starters (Filled)</h2>
+      <p><strong>The purpose of my program is</strong> to model a penguin’s decision at the beach using nested if else logic. It asks the user if they know how to swim (Y or N), randomly sets an <code>age</code> between 5 and 10, and then shows either swimming in the ocean or building a sand castle. I show a complete run of the program in the video.</p>
+
+      <p><strong>My code works by using nested if elses in this part to</strong> first branch on the user’s answer (outer if/else). If the answer is “Y”, the inner if/else checks whether <code>age &gt; 7</code>. If true, the penguin swims; otherwise, it says it’s not old enough yet. If the outer condition is “N”, the else path says it will build a sand castle.</p>
+
+      <p><strong>If I were to change this</strong> (for example, changing the inner condition from <code>age &gt; 7</code> to <code>age &gt; 8</code> or accepting lowercase <code>y</code> in the outer comparison), <strong>the program would run differently</strong> because fewer random ages would qualify to swim (so “not old enough” appears more often), and the input handling would accept more user entries without changing the overall nested structure.</p>
+    </section>
+
+    <section class="card">
+      <h2>Snap! Pseudocode (for Rebuilding)</h2>
+      <pre>
+set [age v] to (pick random (5) to (10))
+ask [Do you know how to swim? (Y or N)] and wait
+if &lt;(answer) = [Y]&gt;
+    if &lt;(age) &gt; [7]&gt;
+        say [Now I am old enough to swim. I will go swimming in the ocean!] for (2) secs
+        glide (1) secs to x: (-50) y: (30)
+    else
+        say [I’m not old enough to swim in the ocean by myself!] for (2) secs
+else
+    say [I don’t know how to swim, I will build a sand castle.] for (2) secs
+    glide (1) secs to x: (50) y: (-20)
+      </pre>
+      <p class="note">Only variables, input, operators, and control with nested if/else — no extra concepts.</p>
+    </section>
+
+    <footer class="note">Author: Jungwon Kim • Teaching Portfolio</footer>
+  </main>
+</body>
+</html>
