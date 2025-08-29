@@ -600,3 +600,131 @@ else
   </main>
 </body>
 </html>
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <title>Compound Conditionals — Write a Program (My Submission)</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <style>
+    :root{
+      --bg:#ffffff;
+      --fg:#111;
+      --muted:#555;
+      --card:#f7f7f9;
+      --accent:#0d6efd;
+      --codebg:#0f0f14;
+      --codefg:#e9e9f0;
+    }
+    html,body{margin:0;padding:0;background:var(--bg);color:var(--fg);font:16px/1.6 system-ui,-apple-system,Segoe UI,Roboto,Inter,Arial,sans-serif}
+    .wrap{max-width:900px;margin:40px auto;padding:0 20px}
+    h1{font-size:2rem;margin:.2rem 0 1rem}
+    h2{font-size:1.4rem;margin:1.5rem 0 .6rem}
+    h3{font-size:1.1rem;margin:1rem 0 .4rem}
+    .card{background:var(--card);border-radius:14px;padding:18px 20px;margin:18px 0}
+    a{color:var(--accent);text-decoration:none}
+    a:hover{text-decoration:underline}
+    pre{background:var(--codebg);color:var(--codefg);border-radius:12px;padding:16px;overflow:auto}
+    .video{position:relative;padding-top:56.25%;border-radius:12px;overflow:hidden;background:#000}
+    .video iframe,.video video{position:absolute;inset:0;width:100%;height:100%;border:0}
+    .note{color:var(--muted);font-size:.95rem}
+    ul{margin:.4rem 0 .8rem 1.2rem}
+    li{margin:.25rem 0}
+  </style>
+</head>
+<body>
+  <main class="wrap">
+    <header>
+      <h1>Compound Conditionals — Write a Program</h1>
+    </header>
+
+    <!-- EXACTLY AS WRITTEN IN THE PROMPT -->
+    <section class="card">
+      <h2>Why Do This:</h2>
+      <p>Practice programming in Snap AND develop your code explanation skills.</p>
+    </section>
+
+    <section class="card">
+      <h2>Do This Part 1: Write a program</h2>
+      <p>Remember, as a class for teachers, we want you to have an efficient experience writing a program that highlights how compound conditionals work.  So we've got instructions for a specific program for you to make that really shows off the concept.  But, for those of you with more programming experience you can choose to make your own program showing off compound conditionals.   Just be SURE you focus on the compound conditionals -- and don't use any concepts we have not yet covered in the class.  Either choice awards the same amount of points.</p>
+
+      <h3>Choose your own adventure by picking one of the following:</h3>
+      <p>Follow <em>these instructions</em> to create a program IDENTICAL to the one described - which highlights the functioning of the compound conditional  concept.</p>
+      <p>Create your own program that shows off the compound conditional  concept (goal:  make it something that helps students "see" compound conditionals  -- and how they can be used to create cool things).  Be sure not to use other concepts we haven't learned yet.  You can use instructions we haven't used yet -- but don't obscure the focus on compound conditionals. </p>
+    </section>
+
+    <section class="card">
+      <h2>Do This Part 2: Document understanding with a video explanation</h2>
+      <p>Note: See the "Show What you Know" activity in Sequences for screencast recording options and advice on using the visible stepper (foot prints) in Snap.</p>
+
+      <p>Create a  video explaining your program -- it must be. less than 5 minutes! Make it as succinct as you can but still show you understand how each line of the code works - with a focus on if else.  See below for sentence starters you need to use!</p>
+
+      <p>Upload your video somewhere publicly accessible (preferably YouTube so that captions are created - you might prefer to make it <em>Unlisted</em>)</p>
+
+      <p>Add the video to the Teaching Portfolio web resource you created in the Course Orientation.  Submit a link to your Teaching Portfolio web resource that anyone with the link can access.</p>
+    </section>
+
+    <section class="card">
+      <h2>Video Requirements</h2>
+      <p>This week we'll go back to asking you to describe a change to a nested if else and how that would impact the program.  Use the following prompts below in developing your code explanation video.</p>
+      <ul>
+        <li>The purpose of my program is... (high level description of what the code does -- e.g. shows a kid dancing).  Be sure to show the complete run of your program!</li>
+        <li>My code works by using compound conditionals in this part to....  (be sure to discuss all code parts that use compound conditionals ).</li>
+        <li>If I were to change this (describe a change in the condition), the program would run differently (describe how the output of the code would change).</li>
+      </ul>
+    </section>
+
+    <!-- MY SUBMISSION CONTENT -->
+    <section class="card">
+      <h2>My Submission — Video (No Voice, Captions Only)</h2>
+      <p class="note">Upload to YouTube as <strong>Unlisted</strong> and replace <code>VIDEO_ID_HERE</code>, or host the MP4 in this repo and use the fallback player.</p>
+
+      <!-- YouTube embed (replace VIDEO_ID_HERE after upload) -->
+      <div class="video" aria-label="YouTube video player — compound conditionals explanation">
+        <iframe
+          src="https://www.youtube.com/embed/sEubhbFArtc"
+          title="Compound Conditionals — Program Explanation (Captions Only)"
+          allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+          allowfullscreen>
+        </iframe>
+      </div>
+
+      <h3>Fallback MP4 (if hosting locally in GitHub Pages)</h3>
+      <div class="video" aria-label="HTML5 video player — compound conditionals explanation">
+        <video controls preload="metadata" src="./compound_conditionals_walkthrough.mp4"></video>
+      </div>
+      <p class="note">Aligned to the course handout/starter for the treasure-finder project (big square ±60 → sound, small square ±20 → “Found it!”). :contentReference[oaicite:1]{index=1}</p>
+    </section>
+
+    <section class="card">
+      <h2>My Submission — Sentence Starters (Filled)</h2>
+      <p><strong>The purpose of my program is</strong> to help Alonzo find a buried treasure by checking whether the mouse cursor is inside two different squares around a hidden coordinate. The big square (±60 in both x and y) plays a sound to indicate “you’re close,” and the small square (±20) displays “Found it!”. I show a complete run of the program in the video.</p>
+
+      <p><strong>My code works by using compound conditionals in this part to</strong> combine two comparisons with <em>AND</em> — one for the x-range and one for the y-range. For the big square, the condition is <code>(treasureX-60 &lt; mouseX &lt; treasureX+60) AND (treasureY-60 &lt; mouseY &lt; treasureY+60)</code>. For the small square, the same pattern uses 20 instead of 60. If either half is false, the whole <em>AND</em> is false.</p>
+
+      <p><strong>If I were to change this</strong> (for example, replacing <em>AND</em> with <em>OR</em> or changing the thresholds like 60→80 / 20→15), <strong>the program would run differently</strong>: using <em>OR</em> would make a cross-shaped hit-area where the sound triggers even when far away in one direction, while increasing 60 to 80 makes the “close” sound easier to trigger, and reducing 20 to 15 makes “Found it!” less frequent.</p>
+    </section>
+
+    <section class="card">
+      <h2>Snap! Pseudocode (for Rebuilding)</h2>
+      <pre>
+set [treasureX v] to (pick random (-180) to (180))
+set [treasureY v] to (pick random (-100) to (0))
+when [mouse down?]
+if &lt;&lt;( ((treasureX) - (60)) &lt; (mouseX) ) and ( (mouseX) &lt; ((treasureX) + (60)) )&gt;
+   and &lt;( ((treasureY) - (60)) &lt; (mouseY) ) and ( (mouseY) &lt; ((treasureY) + (60)) )&gt;&gt;&gt;
+    play note (60) for (0.5) beats
+    if &lt;&lt;( ((treasureX) - (20)) &lt; (mouseX) ) and ( (mouseX) &lt; ((treasureX) + (20)) )&gt;
+       and &lt;( ((treasureY) - (20)) &lt; (mouseY) ) and ( (mouseY) &lt; ((treasureY) + (20)) )&gt;&gt;&gt;
+        say (join (join (join (join [Found it!!! It’s at (] (treasureX)) [, ]) (treasureY)) [)])
+else
+    think [Nothing…]
+      </pre>
+      <p class="note">Only variables, input, operators, and control with compound conditionals — no extra concepts.</p>
+    </section>
+
+    <footer class="note">Author: Jungwon Kim • Teaching Portfolio</footer>
+  </main>
+</body>
+</html>
