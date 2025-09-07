@@ -832,3 +832,76 @@ else
   <script>document.getElementById("yr").textContent = new Date().getFullYear();</script>
 </body>
 </html>
+
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Lists — Code Explanation (Snap!)</title>
+  <style>
+    :root {
+      --bg: #f6f8fa;
+      --ink: #14171a;
+      --accent: #0078d7;
+    }
+    body {
+      margin: 0; padding: 0; background: var(--bg);
+      color: var(--ink);
+      font-family: system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, "Apple Color Emoji", "Segoe UI Emoji";
+      line-height: 1.5;
+    }
+    header { padding: 2rem 1rem 0.5rem 1rem; text-align: center; }
+    h1 { margin: 0.2rem 0; color: var(--accent); font-size: clamp(1.8rem, 3vw, 2.8rem); }
+    h2 { margin-top: 2rem; font-size: clamp(1.2rem, 2.4vw, 1.6rem); }
+    main { max-width: 960px; margin: 0 auto; padding: 0 1rem 3rem 1rem; }
+    .card {
+      background: white; border-radius: 18px; box-shadow: 0 6px 24px rgba(0,0,0,0.06);
+      padding: 1.25rem 1.4rem; margin: 1rem 0;
+    }
+    .meta { font-size: 0.95rem; opacity: 0.85; }
+    .video-wrap { position: relative; padding-top: 56.25%; overflow: hidden; border-radius: 12px; }
+    .video-wrap iframe, .video-wrap video {
+      position: absolute; top: 0; left: 0; width: 100%; height: 100%;
+      border: 0; background: #000;
+    }
+    code, .mono { font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace; }
+    .kbd { background: #eef2f7; border: 1px solid #e2e8f0; padding: 0.1rem 0.3rem; border-radius: 6px; }
+    footer { text-align: center; opacity: 0.7; padding: 2rem 0; }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Lists — Code Explanation (Snap!)</h1>
+    <p class="meta">Instructor-friendly, ≤5 minute video (no voice).</p>
+  </header>
+  <main>
+    <section class="card">
+      <h2>Video</h2>
+      <div class="video-wrap">
+        
+   <iframe src="https://www.youtube.com/embed/RH0htxrFwoI"
+                title="Snap! Lists — Code Explanation"
+                allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                allowfullscreen></iframe>
+      </div>
+      <p class="meta">Tip: Prefer YouTube (Unlisted) to get auto-captions. You can still keep the MP4 in your repo as a backup.</p>
+    </section>
+
+    <section class="card">
+      <h2>Required Prompts</h2>
+      <p><strong>The purpose of my program is</strong> to show how a list lets us filter a database of country names by a starting letter and then present the results.</p>
+      <p><strong>My code works by using a list I created in this part to</strong> collect matching countries: we loop over the database, test if each item begins with the chosen letter, and <span class="mono">add</span> matches into <span class="mono">myList</span>. We also use <span class="mono">if/else</span> to validate input and to handle the “no results” case cleanly.</p>
+      <p><strong>If I didn’t use a list I would have to change my program like</strong> manually storing each country in separate variables or duplicating many <span class="mono">say</span> blocks. Any edits to the database would force lots of code changes. With a list, one loop works for any size dataset — simpler and scalable.</p>
+    </section>
+
+    <section class="card">
+      <h2>Starter & Attribution</h2>
+      <p>This implementation follows the course starter and flow from the Lists assignment handout (starter project with <span class="mono">myDatabase</span>, <span class="mono">myList</span>, and <span class="mono">reset</span> block). See the assignment PDF for the exact sequence of steps.</p>
+    </section>
+  </main>
+  <footer>
+    <p>© 2025 — Teaching Portfolio page for Snap! Lists activity.</p>
+  </footer>
+</body>
+</html>
