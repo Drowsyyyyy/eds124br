@@ -728,3 +728,107 @@ else
   </main>
 </body>
 </html>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Abstraction in Snap — Custom Blocks Demo</title>
+  <style>
+    body{font-family:system-ui,-apple-system,Segoe UI,Roboto,Helvetica,Arial,sans-serif;line-height:1.5;margin:0;background:#f7fafc;color:#111}
+    header{padding:2.5rem 1rem;background:#0ea5e9;color:white}
+    header h1{margin:0;font-size:2rem}
+    main{max-width:900px;margin:auto;padding:1.5rem}
+    section{background:white;border-radius:14px;padding:1.25rem;margin:1rem 0;box-shadow:0 6px 18px rgba(0,0,0,.06)}
+    h2{margin-top:0}
+    code,kbd{background:#f1f5f9;padding:.1rem .3rem;border-radius:.35rem}
+    .pill{display:inline-block;background:#e2f2ff;border:1px solid #cde9ff;color:#065986;padding:.15rem .5rem;border-radius:999px;margin-right:.25rem}
+    .blocks{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:.75rem}
+    footer{color:#64748b;text-align:center;padding:2rem .5rem}
+    .video{position:relative;padding-bottom:56.25%;height:0;overflow:hidden;border-radius:12px}
+    .video iframe{position:absolute;inset:0;width:100%;height:100%;border:0}
+    ul{margin:.3rem 0 .8rem 1.2rem}
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Abstraction in Snap — Making and Using My Own Blocks</h1>
+    <p>Teaching Portfolio • Week: Abstraction (Create-Your-Own Block)</p>
+  </header>
+
+  <main>
+    <section aria-labelledby="purpose">
+      <h2 id="purpose">1) Purpose of my program</h2>
+      <p>
+        The purpose of my program is to draw a simple scene — sky, sun with rays, grass, and a flower —
+        using <strong>abstraction</strong>. I created high-level custom blocks so the main script reads like
+        a short story instead of low-level pen commands.
+      </p>
+      <p class="pill">abstraction</p><p class="pill">custom blocks</p><p class="pill">readability</p>
+    </section>
+
+    <section aria-labelledby="run">
+      <h2 id="run">2) Full run (demo video)</h2>
+      <div class="video">
+        <!-- Replace YOUR_VIDEO_ID after you upload -->
+        <iframe
+          src="https://www.youtube.com/embed/7XvlU1b4nLU"
+          title="Abstraction in Snap — Demo"
+          allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+          allowfullscreen>
+        </iframe>
+      </div>
+      <p>
+        <em>Tip:</em> I recorded with Snap’s <strong>Visible Stepping</strong> to narrate each block action.
+      </p>
+    </section>
+
+    <section aria-labelledby="how">
+      <h2 id="how">3) How my code works</h2>
+      <p>
+        My code works by using a top-level block I created called <code>paintPicture</code>. That block calls
+        four other custom blocks I wrote:
+      </p>
+      <div class="blocks">
+        <div><strong>fillSky</strong><br/>Sets pen color &amp; fills backdrop.</div>
+        <div><strong>drawSun</strong><br/>Draws a circle and calls <code>drawSunRay x:y:angle:</code> several times.</div>
+        <div><strong>drawGrass</strong><br/>Zig-zags across the bottom using a repeat loop.</div>
+        <div><strong>drawFlower at x: y:</strong><br/>Draws a small hexagon flower at any position.</div>
+      </div>
+      <p>
+        Helper block <code>drawSunRay x: y: angle:</code> demonstrates parameterized reuse. With inputs for
+        position and angle, I can add rays anywhere without copying code.
+      </p>
+      <p>
+        I also added a convenience reset: <code>when space key pressed → clear</code> so I can test quickly.
+      </p>
+      <p style="font-size:.95rem;color:#475569">
+        Built to mirror the course’s suggested structure of <code>paintPicture → fillSky, drawSun, drawGrass, drawFlower</code>. :contentReference[oaicite:1]{index=1}
+      </p>
+    </section>
+
+    <section aria-labelledby="why">
+      <h2 id="why">4) Why making my own blocks made life easier</h2>
+      <ul>
+        <li><strong>Readable main script:</strong> the green-flag script is just <code>paintPicture</code>.</li>
+        <li><strong>Single-responsibility blocks:</strong> each custom block handles one idea, so it’s easy to find and fix logic.</li>
+        <li><strong>Reuse via parameters:</strong> <code>drawSunRay</code> and <code>drawFlower x:y:</code> work anywhere I call them.</li>
+        <li><strong>Easy testing:</strong> I can step into a single block with Visible Stepping and debug locally.</li>
+      </ul>
+    </section>
+
+    <section aria-labelledby="links">
+      <h2 id="links">5) Project & resources</h2>
+      <ul>
+        <li>My Snap project (shared): <a href="YOUR_SNAP_LINK" target="_blank" rel="noopener">Open in Snap</a></li>
+        <li>Snap! editor: <a href="https://snap.berkeley.edu/snap/snap.html" target="_blank" rel="noopener">snap.berkeley.edu</a></li>
+      </ul>
+    </section>
+  </main>
+
+  <footer>
+    <p>© <span id="yr"></span> Abstraction Demo • Made for the “Abstraction — Write a Program” assignment.</p>
+  </footer>
+  <script>document.getElementById("yr").textContent = new Date().getFullYear();</script>
+</body>
+</html>
